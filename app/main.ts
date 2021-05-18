@@ -1,4 +1,4 @@
-import express, { Application, Request, Response } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 import swaggerUi from "swagger-ui-express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -28,6 +28,13 @@ app.use(
 );
 
 app.use(Router);
+
+// catch 404 and forward to error handler
+app.use(function (req: Request, res: Response, next: NextFunction) {
+  res.status(404).send({
+    message: "Not Found",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
