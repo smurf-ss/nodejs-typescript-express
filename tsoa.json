@@ -1,0 +1,38 @@
+{
+  "entryFile": "app/main.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "spec": {
+    "outputDirectory": "public",
+    "specVersion": 3,
+    "securityDefinitions": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "access_token",
+        "in": "header"
+      }
+    },
+    "schemes": ["http", "https"],
+    "spec": {
+      "info": {
+        "description": "Nodejs+Express+Typescript+TSOA Example",
+        "version": "1.0.0",
+        "title": "Example Nodejs+Typescript"
+      },
+      "servers": [
+        {
+          "url": "http://localhost:8080",
+          "description": "Development server"
+        },
+        {
+          "url": "http://staging:8080",
+          "description": "Staging server"
+        },
+        {
+          "url": "http://production:8080",
+          "description": "Production server"
+        }
+      ]
+    }
+  },
+  "ignore": ["**/node_modules/**"]
+}
