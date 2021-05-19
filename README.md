@@ -21,12 +21,11 @@ Uses TSOA to generate swagger documentation based on decorated controllers and m
 - `app/routes/index.ts` - the middleman for handling all requests and getting routes.
 - `app/utils` - common functions that are often used
 - `tsconfig.json` - TypeScript config for `tsc` compile used to generate Javascript
-- `tslint.json` - TypeScript linting config setup to mimic StandardJS
 - `tsoa.json` - TSOA config, see [here](https://github.com/lukeautry/tsoa) for details
 - `dist` - folder for generate JavaScript
 - `public/swagger.json` - TSOA generated swagger doc from command `npm run-script swagger`
 
-## how to running
+## How to running
 
 ```
 npm install
