@@ -8,7 +8,7 @@
     "predev": "npm run swagger",
     "prebuild": "npm run swagger",
     "build": "npm run clean && tsc",
-    "start:dev": "nodemon && npm run swagger",
+    "start:dev": "concurrently \"NODE_ENV=development\" \"nodemon\" \"nodemon -x tsoa spec\"",
     "swagger": "tsoa spec",
     "test": "jest",
     "clean": "rimraf dist"

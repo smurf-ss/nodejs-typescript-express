@@ -1,15 +1,17 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import swaggerUi from "swagger-ui-express";
+
 import cors from "cors";
+
 import dotenv from "dotenv";
 
 import Router from "./routes";
 
 const app: Application = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
-console.log("process", process.env.NODE_ENV);
+// console.log("process", process.env.NODE_ENV);
 
 app.use(cors());
 
@@ -37,5 +39,5 @@ app.use(function (req: Request, res: Response, next: NextFunction) {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}/docs`);
 });

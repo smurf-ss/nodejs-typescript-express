@@ -1,4 +1,4 @@
-import { validator } from "../util/validator";
+import { validator } from "../utils/validator";
 import express, {
   Application,
   NextFunction,

@@ -12,7 +12,7 @@ import {
   Delete,
 } from "tsoa";
 
-import { ITasksPayload, TasksResponse } from "../interface/tasks";
+import { ITasksPayload, TasksResponse } from "../models/tasks";
 
 @Tags("Tasks")
 @Route("/tasks")
