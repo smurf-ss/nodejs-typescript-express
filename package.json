@@ -8,7 +8,7 @@
     "predev": "npm run swagger",
     "prebuild": "npm run swagger",
     "build": "npm run clean && tsc",
-    "start:dev": "concurrently \"NODE_ENV=development\" \"nodemon\" \"nodemon -x tsoa spec\"",
+    "start:dev": "set NODE_ENV=development && concurrently  \"nodemon\" \"nodemon -x tsoa spec\"",
     "swagger": "tsoa spec",
     "test": "jest",
     "clean": "rimraf dist"
@@ -24,6 +24,7 @@
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
+    "mssql": "^7.1.0",
     "swagger-jsdoc": "^7.0.0-rc.6",
     "swagger-ui-express": "^4.1.6",
     "tsoa": "^3.7.0"

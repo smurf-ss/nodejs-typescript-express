@@ -22,6 +22,10 @@
         {
           "url": "http://localhost:8000",
           "description": "Development server"
+        },
+        {
+          "url": "https://nodejs-typescript-express-domo.herokuapp.com",
+          "description": "Staging server"
         }
       ]
     }
