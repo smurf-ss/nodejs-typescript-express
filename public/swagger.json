@@ -177,12 +177,41 @@
 					}
 				]
 			}
+		},
+		"/categories": {
+			"get": {
+				"operationId": "GetData",
+				"responses": {
+					"200": {
+						"description": "Created",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"type": "string"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Categories"
+				],
+				"security": [],
+				"parameters": []
+			}
 		}
 	},
 	"servers": [
 		{
 			"url": "http://localhost:8000",
 			"description": "Development server"
+		},
+		{
+			"url": "https://nodejs-typescript-express-domo.herokuapp.com",
+			"description": "Staging server"
 		}
 	]
 }
